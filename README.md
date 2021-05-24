@@ -1,4 +1,4 @@
-# OpenCV-combine-movie
+# OpenCV combine movie
 
 - Python 3.9.0
 
