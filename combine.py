@@ -1,11 +1,14 @@
-import cv2
 import glob
+import os
+
+import cv2
+from tqdm import tqdm
 
 
 def combine_movie():
-    fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
+    fourcc = cv2.VideoWriter_fourcc("m", "p", "4", "v")
 
-    files = sorted(glob.glob('media/*.mp4'))
+    files = sorted(glob.glob("media/*.mp4"))
 
     movie = cv2.VideoCapture(files[0])
     fps = movie.get(cv2.CAP_PROP_FPS)

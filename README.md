@@ -5,6 +5,7 @@
 
 - Python 3.12.0
 - opencv-python 4.11.0.86
+- tqdm 4.66.2
 
 パッケージ管理: `uv`
 
@@ -12,9 +13,20 @@
 
 ### モジュールのインストール
 
-`1`の方法で直接`opencv-python`をインストールするか、uvで管理しているので`2`の方法でパッケージをインストールする。
-   1. `pip install opencv-python`
-   2. `uv add -r requirements.txt`
+1. **初回インストール**（`pyproject.toml`／`uv.lock` から環境構築）  
+   ```bash
+   uv install
+   ```
+
+2. **差分同期**（既存環境との差分をインストール・アンインストール）  
+   ```bash
+   uv sync
+   ```
+
+3. **個別にインストール**（`uv` を使えない場合の例）
+   ```
+   pip install opencv-python tqdm
+   ```
 
 ### 結合する動画ファイルの用意
 
